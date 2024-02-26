@@ -13,10 +13,7 @@ class Checkout
     private array $products = [];
 
     public function __construct(
-        private readonly array $discountRules = [
-            'FR1' => new DiscountRule(DiscountType::BOGO),
-            'SR1' => new DiscountRule(DiscountType::BULK, 3, 4.50),
-        ]
+        private readonly array $discountRules
     ) {
     }
 
