@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\AchievementsController;
+use App\Http\Controllers\DoctorController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,6 +14,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', static function () {
-    return view('welcome');
-});
+Route::get('/doctor/network-aggregates/{id}', [DoctorController::class, 'networkAggregates']);
